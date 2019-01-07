@@ -49,7 +49,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install --no-install-recommends a
         php7.2-soap \
         php7.2-xdebug \
         php7.2-xml \
-        php7.2-zip
+        php7.2-zip \
+        mysql-client
 
 #RUN rm -rf /var/lib/apt/lists/*
 
