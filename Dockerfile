@@ -44,6 +44,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     lnav \
     nginx \
     php7.2-fpm \
+    php7.2-pgsql \
     tree \
     vim
 RUN printf "\n" | pecl install mcrypt-1.0.1
