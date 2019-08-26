@@ -39,6 +39,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     php7.2-zip
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     colordiff \
+    bash-completion \
     htop \
     inotify-tools \
     lnav \
