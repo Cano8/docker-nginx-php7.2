@@ -13,7 +13,7 @@ for file in $(find /project/.environment/docker/fs/ -type f);
     done
 
 service nginx start
-service php7.2-fpm start
+service php7.4-fpm start
 
 # if [ -f ${stashPath}run.sh ];
 # then
