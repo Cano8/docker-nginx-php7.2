@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER NJ Darda <jedrekdarda@gmail.com>
+LABEL maintainer="jedrekdarda@gmail.com"
 
 RUN apt-get update && apt-get -y install software-properties-common python-software-properties
 RUN apt-get clean && apt-get update && apt-get install -y locales
@@ -10,33 +10,31 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install --no-install-recommends apt-utils \
     curl \
     git \
-    libmcrypt-dev \
     make \
     mysql-client \
     unzip \
     wget \
     zip
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
-    php-pear \
-    php7.2 \
-    php7.2-apcu \
-    php7.2-bcmath \
-    php7.2-bz2 \
-    php7.2-cli \
-    php7.2-common \
-    php7.2-curl \
-    php7.2-dba \
-    php7.2-dev \
-    php7.2-gd \
-    php7.2-json \
-    php7.2-mbstring \
-    php7.2-memcache \
-    php7.2-mysql \
-    php7.2-redis \
-    php7.2-soap \
-    php7.2-xdebug \
-    php7.2-xml \
-    php7.2-zip
+    php7.4 \
+    php7.4-apcu \
+    php7.4-bcmath \
+    php7.4-bz2 \
+    php7.4-cli \
+    php7.4-common \
+    php7.4-curl \
+    php7.4-dba \
+    php7.4-dev \
+    php7.4-gd \
+    php7.4-json \
+    php7.4-mbstring \
+    php7.4-memcache \
+    php7.4-mysql \
+    php7.4-redis \
+    php7.4-soap \
+    php7.4-xdebug \
+    php7.4-xml \
+    php7.4-zip
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     colordiff \
     bash-completion \
@@ -44,11 +42,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     inotify-tools \
     lnav \
     nginx \
-    php7.2-fpm \
-    php7.2-pgsql \
+    php7.4-fpm \
+    php7.4-pgsql \
     tree \
     vim
-RUN printf "\n" | pecl install mcrypt-1.0.1
 RUN rm -rf /var/lib/apt/lists/*
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
